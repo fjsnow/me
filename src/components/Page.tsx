@@ -29,7 +29,7 @@ const Page = ({
         <div className="flex flex-col max-w-4xl w-full h-full p-6">
             <Nav current={current}></Nav>
             <div className="w-full flex-grow my-8">{children}</div>
-            <div className="flex items-center justify-center text-stone-400 mb-2 p-6 gap-4">
+            <div className="flex items-center justify-center text-stone-400 mb-2 py-6 gap-4">
                 <span>© Freddy Snow, {new Date().getFullYear()}</span>
                 <span className="text-stone-300 dark:text-stone-700">|</span>
                 <SocialLink
