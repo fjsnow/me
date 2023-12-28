@@ -22,11 +22,8 @@ import {
     RedisOriginal,
     RustPlain,
     TailwindcssPlain,
-    TwitterOriginal,
     TypescriptOriginal,
 } from "devicons-react";
-import { Github, Twitter } from "lucide-react";
-import Link from "next/link";
 
 const Technology = ({
     display,
@@ -42,7 +39,7 @@ const Technology = ({
     return (
         <div className="flex flex-col items-start border border-stone-200 dark:border-stone-700 rounded-lg w-full md:flex-row md:items-center">
             <div
-                className="flex items-center justify-center px-12 py-8 rounded-t-lg border-b border-stone-200 dark:border-stone-700 w-full md:w-min md:rounded-tr-none md:rounded-l-lg md:border-b-0 md:border-r"
+                className="flex items-center justify-center px-12 py-6 rounded-t-lg border-b border-stone-200 dark:border-stone-700 w-full md:w-min md:rounded-tr-none md:rounded-l-lg md:border-b-0 md:border-r md:py-8"
                 style={{ backgroundColor: colour }}
             >
                 {icon}

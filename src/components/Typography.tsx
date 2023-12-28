@@ -8,7 +8,9 @@ const Heading = ({
     children: React.ReactNode;
 }) => {
     return (
-        <h1 className={twMerge("text-2xl font-bold", className)}>{children}</h1>
+        <h1 className={twMerge("text-xl font-bold md:text-2xl", className)}>
+            {children}
+        </h1>
     );
 };
 
@@ -20,7 +22,7 @@ const SubHeading = ({
     children: React.ReactNode;
 }) => {
     return (
-        <h1 className={twMerge("text-xl font-semibold", className)}>
+        <h1 className={twMerge("text-lg font-semibold md:text-xl", className)}>
             {children}
         </h1>
     );
@@ -34,7 +36,12 @@ const Paragraph = ({
     children: React.ReactNode;
 }) => {
     return (
-        <p className={twMerge("text-black dark:text-white", className)}>
+        <p
+            className={twMerge(
+                "text-black dark:text-white text-sm md:text-base",
+                className
+            )}
+        >
             {children}
         </p>
     );

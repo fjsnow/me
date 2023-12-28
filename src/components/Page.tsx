@@ -30,14 +30,7 @@ const Page = ({
             <Nav current={current}></Nav>
             <div className="w-full flex-grow my-8">{children}</div>
             <div className="flex items-center justify-center text-stone-400 mb-2 p-6 gap-4">
-                © Freddy Snow, {new Date().getFullYear()}
-                <span className="text-stone-300 dark:text-stone-700">|</span>
-                <Link
-                    href="https://github.com/fjsnow/freddysnow.com"
-                    className="hover:underline"
-                >
-                    Source
-                </Link>
+                <span>© Freddy Snow, {new Date().getFullYear()}</span>
                 <span className="text-stone-300 dark:text-stone-700">|</span>
                 <SocialLink
                     icon={<Twitter className="h-4 w-4" />}
