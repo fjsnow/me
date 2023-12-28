@@ -123,7 +123,7 @@ const Index = () => {
                     use="A strongly-typed superset of JavaScript."
                 />
                 <Technology
-                    display="React.js"
+                    display="React"
                     icon={<ReactOriginal size={32} />}
                     colour="#222222"
                     use="A component-based library for building user interfaces."
