@@ -5,6 +5,8 @@ import {
     Linebreak,
     SubHeading,
 } from "@/components/Typography";
+import { MusicalNoteIcon } from "@heroicons/react/16/solid";
+import { MapPinIcon } from "@heroicons/react/16/solid";
 import {
     Css3Plain,
     DockerPlain,
@@ -20,10 +22,11 @@ import {
     RedisOriginal,
     RustPlain,
     TailwindcssPlain,
+    TwitterOriginal,
     TypescriptOriginal,
 } from "devicons-react";
+import { Github, Twitter } from "lucide-react";
 import Link from "next/link";
-import { twMerge } from "tailwind-merge";
 
 const Technology = ({
     display,
@@ -37,20 +40,22 @@ const Technology = ({
     use: string;
 }) => {
     return (
-        <div className="flex flex-row items-center border border-stone-200 dark:border-stone-700 rounded-lg h-24 w-full">
+        <div className="flex flex-col items-start border border-stone-200 dark:border-stone-700 rounded-lg w-full md:flex-row md:items-center">
             <div
-                className="flex items-center justify-center px-12 h-full rounded-l-lg border-r border-stone-200 dark:border-stone-700"
+                className="flex items-center justify-center px-12 py-8 rounded-t-lg border-b border-stone-200 dark:border-stone-700 w-full md:w-min md:rounded-tr-none md:rounded-l-lg md:border-b-0 md:border-r"
                 style={{ backgroundColor: colour }}
             >
                 {icon}
             </div>
-            <div className="flex flex-col justify-center min-w-[8rem] px-4 py-2">
-                <h1 className="font-bold text-sm">name:</h1>
-                <h2 className="text-sm">{display}</h2>
-            </div>
-            <div className="flex flex-col justify-center px-4 py-2">
-                <h1 className="font-bold text-sm">use:</h1>
-                <h2 className="text-sm">{use}</h2>
+            <div className="flex flex-col justify-center gap-4 md:flex-row md:items-center p-4">
+                <div className="flex flex-col justify-center min-w-[8rem]">
+                    <h1 className="font-bold text-sm">name:</h1>
+                    <h2 className="text-sm">{display}</h2>
+                </div>
+                <div className="flex flex-col justify-center">
+                    <h1 className="font-bold text-sm">use:</h1>
+                    <h2 className="text-sm">{use}</h2>
+                </div>
             </div>
         </div>
     );
@@ -93,21 +98,14 @@ const Index = () => {
             <SubHeading>What do I do?</SubHeading>
             <Paragraph>
                 I&apos;m a self-taught developer, particularly interested in
-                fullstack web development, systems programming, and a little bit
-                of game development. I also love Mathematics!
+                fullstack web development, UI/UX design, and a little bit of
+                game development. I also love Mathematics!
             </Paragraph>
             <br />
             <Paragraph>
                 I&apos;m now studying computer science full-time at the{" "}
                 <b>University of Birmingham</b>. I&apos;m also working on a few
-                projects in my spare time, which you can find under the{" "}
-                <Link
-                    href="/projects"
-                    className="text-blue-700 dark:text-blue-800 hover:underline cursor-pointer"
-                >
-                    /projects
-                </Link>{" "}
-                tab.
+                side projects in my spare time.
             </Paragraph>
             <Linebreak />
             <SubHeading>What do I use?</SubHeading>
@@ -117,7 +115,7 @@ const Index = () => {
                 Here&apos;s a few I&apos;m currently using the most:
             </Paragraph>
             <br />
-            <div className="flex flex-col items-center justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-4 md:gap-2">
                 <Technology
                     display="TypeScript"
                     icon={<TypescriptOriginal size={32} />}
@@ -134,7 +132,7 @@ const Index = () => {
                     display="Next.js"
                     icon={<NextjsLine size={32} />}
                     colour="#fff"
-                    use="A full-stack framework built on top of React.js."
+                    use="A full-stack framework built on top of React."
                 />
                 <Technology
                     display="MySQL"

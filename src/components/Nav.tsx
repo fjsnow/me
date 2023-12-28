@@ -1,7 +1,8 @@
 import { twMerge } from "tailwind-merge";
+import { cookies } from "next/headers";
+
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import { cookies } from "next/headers";
 
 const NavLink = ({
     text,
@@ -35,14 +36,14 @@ const Nav = ({ current }: { current: string }) => {
                     fj@freddysnow.com ~ #
                 </h1>
             </Link>
-            <ul className="flex flex-row gap-6 ml-auto">
-                <NavLink text="/index" href="/" selected={current == "index"} />
+            <div className="flex flex-row gap-6 ml-auto">
+                {/* <NavLink text="/index" href="/" selected={current == "index"} />
                 <NavLink
                     text="/projects"
                     href="/projects"
                     selected={current == "projects"}
-                />
-            </ul>
+                /> */}
+            </div>
             <ThemeToggle cookie={dark} />
         </div>
     );

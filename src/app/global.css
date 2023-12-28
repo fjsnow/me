@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 100vh fix for mobile browsers */
-.h-screen {
+.screen {
     height: 100vh;
     height: 100dvh;
+    padding-left: calc(100vw - 100%);
 }

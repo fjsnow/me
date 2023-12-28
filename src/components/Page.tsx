@@ -1,5 +1,22 @@
 import Link from "next/link";
 import Nav from "./Nav";
+import { Github, Twitter } from "lucide-react";
+
+const SocialLink = ({
+    icon,
+    href,
+}: {
+    icon: React.ReactNode;
+    href: string;
+}) => {
+    return (
+        <Link href={href}>
+            <div className="flex items-center justify-center h-8 w-8 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-700 cursor-pointer">
+                {icon}
+            </div>
+        </Link>
+    );
+};
 
 const Page = ({
     current,
@@ -12,15 +29,25 @@ const Page = ({
         <div className="flex flex-col max-w-4xl w-full h-full p-6">
             <Nav current={current}></Nav>
             <div className="w-full flex-grow my-8">{children}</div>
-            <h2 className="text-center text-stone-400 mb-2 p-6">
-                © Freddy Snow, {new Date().getFullYear()} |{" "}
+            <div className="flex items-center justify-center text-stone-400 mb-2 p-6 gap-4">
+                © Freddy Snow, {new Date().getFullYear()}
+                <span className="text-stone-300 dark:text-stone-700">|</span>
                 <Link
                     href="https://github.com/fjsnow/freddysnow.com"
                     className="hover:underline"
                 >
                     Source
                 </Link>
-            </h2>
+                <span className="text-stone-300 dark:text-stone-700">|</span>
+                <SocialLink
+                    icon={<Twitter className="h-4 w-4" />}
+                    href="https://twitter.com/freddyjsnow"
+                />
+                <SocialLink
+                    icon={<Github className="h-4 w-4" />}
+                    href="https://github.com/fjsnow"
+                />
+            </div>
         </div>
     );
 };

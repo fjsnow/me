@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.1.1",
     "devicons-react": "^1.2.6",
     "gray-matter": "^4.0.3",
+    "lucide-react": "^0.303.0",
     "next": "14.0.4",
     "react": "^18",
     "react-code-blocks": "^0.1.5",
