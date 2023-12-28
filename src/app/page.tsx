@@ -143,7 +143,8 @@ const Index = () => {
             </div>
             <br />
             <Paragraph className="text-center">
-                And here's some more tools and technologies I'm familiar with:
+                And here&apos;s some more tools and technologies I&apos;m
+                familiar with:
             </Paragraph>
             <div className="flex flex-row flex-wrap justify-center gap-2 mt-4 max-w-md mx-auto">
                 <ShortTechnology

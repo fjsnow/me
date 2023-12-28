@@ -33,7 +33,7 @@ const Nav = ({ current }: { current: string }) => {
         <div className="flex flex-row items-center justify-start h-8">
             <Link href="/">
                 <h1 className="text-white bg-blue-700 dark:bg-blue-800 px-4 py-1">
-                    fj@freddysnow.com ~ #
+                    fj@personal-site:~$
                 </h1>
             </Link>
             <div className="flex flex-row gap-6 ml-auto">
