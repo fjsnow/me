@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 100vh fix for mobile browsers */
+.h-screen {
+    height: 100vh;
+    height: 100dvh;
+}

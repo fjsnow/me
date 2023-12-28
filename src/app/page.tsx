@@ -1,5 +1,200 @@
-const Page = () => {
-    return <></>;
+import Page from "@/components/Page";
+import {
+    Heading,
+    Paragraph,
+    Linebreak,
+    SubHeading,
+} from "@/components/Typography";
+import {
+    Css3Plain,
+    DockerPlain,
+    GitPlain,
+    Html5Plain,
+    JavaOriginal,
+    KotlinOriginal,
+    MongodbOriginal,
+    MysqlPlain,
+    NextjsLine,
+    PythonPlain,
+    ReactOriginal,
+    RedisOriginal,
+    RustPlain,
+    TailwindcssPlain,
+    TypescriptOriginal,
+} from "devicons-react";
+import Link from "next/link";
+import { twMerge } from "tailwind-merge";
+
+const Technology = ({
+    display,
+    icon,
+    colour,
+    use,
+}: {
+    display: string;
+    icon: React.ReactNode;
+    colour: string;
+    use: string;
+}) => {
+    return (
+        <div className="flex flex-row items-center border border-stone-200 dark:border-stone-700 rounded-lg h-24 w-full">
+            <div
+                className="flex items-center justify-center px-12 h-full rounded-l-lg border-r border-stone-200 dark:border-stone-700"
+                style={{ backgroundColor: colour }}
+            >
+                {icon}
+            </div>
+            <div className="flex flex-col justify-center min-w-[8rem] px-4 py-2">
+                <h1 className="font-bold text-sm">name:</h1>
+                <h2 className="text-sm">{display}</h2>
+            </div>
+            <div className="flex flex-col justify-center px-4 py-2">
+                <h1 className="font-bold text-sm">use:</h1>
+                <h2 className="text-sm">{use}</h2>
+            </div>
+        </div>
+    );
 };
 
-export default Page;
+const ShortTechnology = ({
+    logo,
+    colour,
+}: {
+    logo: React.ReactNode;
+    colour: string;
+}) => {
+    return (
+        <div
+            className={"flex items-center justify-center h-16 w-16 rounded-lg"}
+            style={{ backgroundColor: colour }}
+        >
+            {logo}
+        </div>
+    );
+};
+
+const Index = () => {
+    const birth = "2004-12-03";
+    const age =
+        new Date().getFullYear() -
+        new Date(birth).getFullYear() -
+        (new Date().getMonth() < new Date(birth).getMonth() &&
+        new Date().getDate() < new Date(birth).getDate()
+            ? 1
+            : 0);
+
+    return (
+        <Page current="index">
+            <Heading>Hey - I&apos;m Fred</Heading>
+            <Paragraph>
+                {age} y/o developer from the UK studying computer science.
+            </Paragraph>
+            <Linebreak />
+            <SubHeading>What do I do?</SubHeading>
+            <Paragraph>
+                I&apos;m a self-taught developer, particularly interested in
+                fullstack web development, systems programming, and a little bit
+                of game development. I also love Mathematics!
+            </Paragraph>
+            <br />
+            <Paragraph>
+                I&apos;m now studying computer science full-time at the{" "}
+                <b>University of Birmingham</b>. I&apos;m also working on a few
+                projects in my spare time, which you can find under the{" "}
+                <Link
+                    href="/projects"
+                    className="text-blue-700 dark:text-blue-800 hover:underline cursor-pointer"
+                >
+                    /projects
+                </Link>{" "}
+                tab.
+            </Paragraph>
+            <Linebreak />
+            <SubHeading>What do I use?</SubHeading>
+            <Paragraph>
+                I love to learn new technologies, languages, and frameworks!
+                <br />
+                Here&apos;s a few I&apos;m currently using the most:
+            </Paragraph>
+            <br />
+            <div className="flex flex-col items-center justify-center gap-2">
+                <Technology
+                    display="TypeScript"
+                    icon={<TypescriptOriginal size={32} />}
+                    colour="#007ACC"
+                    use="A strongly-typed superset of JavaScript."
+                />
+                <Technology
+                    display="React.js"
+                    icon={<ReactOriginal size={32} />}
+                    colour="#222222"
+                    use="A component-based library for building user interfaces."
+                />
+                <Technology
+                    display="Next.js"
+                    icon={<NextjsLine size={32} />}
+                    colour="#fff"
+                    use="A full-stack framework built on top of React.js."
+                />
+                <Technology
+                    display="MySQL"
+                    icon={<MysqlPlain size={32} color="#fff" />}
+                    colour="#41759B"
+                    use="A relational database management system."
+                />
+            </div>
+            <br />
+            <Paragraph className="text-center">
+                And here's some more tools and technologies I'm familiar with:
+            </Paragraph>
+            <div className="flex flex-row flex-wrap justify-center gap-2 mt-4 max-w-md mx-auto">
+                <ShortTechnology
+                    logo={<GitPlain size={32} color="#fff" />}
+                    colour="#F05032"
+                />
+                <ShortTechnology
+                    logo={<Html5Plain size={32} color="#fff" />}
+                    colour="#E04D1D"
+                />
+                <ShortTechnology
+                    logo={<Css3Plain size={32} color="#fff" />}
+                    colour="#0177BD"
+                />
+                <ShortTechnology
+                    logo={<TailwindcssPlain size={32} color="#24BDBB" />}
+                    colour="#242938"
+                />
+                <ShortTechnology
+                    logo={<JavaOriginal size={32} />}
+                    colour="#242938"
+                />
+                <ShortTechnology
+                    logo={<KotlinOriginal size={32} />}
+                    colour="#242938"
+                />
+                {/* <ShortTechnology
+                    logo={<RustPlain size={32} color="#fff" />}
+                    colour="#000"
+                /> soonTM */}
+                <ShortTechnology
+                    logo={<PythonPlain size={32} color="#fff" />}
+                    colour="#41759B"
+                />
+                <ShortTechnology
+                    logo={<MongodbOriginal size={32} />}
+                    colour="#023430"
+                />
+                <ShortTechnology
+                    logo={<RedisOriginal size={32} />}
+                    colour="#D82C20"
+                />
+                <ShortTechnology
+                    logo={<DockerPlain size={32} color="#fff" />}
+                    colour="#2496ED"
+                />
+            </div>
+        </Page>
+    );
+};
+
+export default Index;
