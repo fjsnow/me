@@ -88,9 +88,7 @@ const Index = () => {
     return (
         <Page current="index">
             <Heading>Hey - I&apos;m Fred</Heading>
-            <Paragraph>
-                {age} y/o developer from the UK studying computer science.
-            </Paragraph>
+            <Paragraph>{age} y/o developer from the UK.</Paragraph>
             <Linebreak />
             <SubHeading>What do I do?</SubHeading>
             <Paragraph>
