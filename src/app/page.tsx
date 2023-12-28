@@ -100,7 +100,7 @@ const Index = () => {
             </Paragraph>
             <br />
             <Paragraph>
-                I&apos;m now studying computer science full-time at the{" "}
+                I&apos;m currently studying computer science full-time at the{" "}
                 <b>University of Birmingham</b>. I&apos;m also working on a few
                 side projects in my spare time.
             </Paragraph>
