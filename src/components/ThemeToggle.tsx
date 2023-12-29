@@ -1,7 +1,7 @@
 "use client";
 
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ThemeToggle = ({ cookie }: { cookie: boolean }) => {
     const [dark, setDark] = useState(cookie);

@@ -1,5 +1,4 @@
 import { cookies } from "next/headers";
-
 import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./global.css";
@@ -19,13 +18,13 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
-    let dark = cookies().get("theme")?.value == "dark";
+    let dark = cookies().get("theme")?.value != "light";
 
     return (
         <html lang="en" className={dark ? "dark" : ""}>
             <body
                 className={twMerge(
-                    "screen flex justify-center bg-white text-black dark:bg-black dark:text-white",
+                    "screenflex justify-center bg-white text-black dark:bg-black dark:text-white",
                     ibm.className
                 )}
             >

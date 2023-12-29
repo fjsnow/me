@@ -27,7 +27,7 @@ const NavLink = ({
 };
 
 const Nav = ({ current }: { current: string }) => {
-    let dark = cookies().get("theme")?.value == "dark";
+    let dark = cookies().get("theme")?.value != "light";
 
     return (
         <div className="flex flex-row items-center justify-start h-8">
