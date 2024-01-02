@@ -11,6 +11,7 @@ const ibm = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
     title: "Freddy Snow",
+    description: "Freddy Snow's personal site/portfolio",
 };
 
 export default function RootLayout({
