@@ -24,7 +24,7 @@ export default function RootLayout({
         <html lang="en" className={dark ? "dark" : ""}>
             <body
                 className={twMerge(
-                    "screen flex justify-center bg-white text-black dark:bg-black dark:text-white",
+                    "screen gflex justify-center bg-white text-black dark:bg-black dark:text-white",
                     ibm.className
                 )}
             >

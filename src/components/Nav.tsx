@@ -4,27 +4,27 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
-const NavLink = ({
-    text,
-    href,
-    selected,
-}: {
-    text: string;
-    href: string;
-    selected: boolean;
-}) => {
-    return (
-        <Link
-            href={href}
-            className={twMerge(
-                "text-stone-400 dark:text-stone-500 cursor-pointer transition-colors hover:text-stone-900 dark:hover:text-stone-100",
-                selected ? "text-stone-900 dark:text-stone-100" : ""
-            )}
-        >
-            {text}
-        </Link>
-    );
-};
+// const NavLink = ({
+//     text,
+//     href,
+//     selected,
+// }: {
+//     text: string;
+//     href: string;
+//     selected: boolean;
+// }) => {
+//     return (
+//         <Link
+//             href={href}
+//             className={twMerge(
+//                 "text-stone-400 dark:text-stone-500 cursor-pointer transition-colors hover:text-stone-900 dark:hover:text-stone-100",
+//                 selected ? "text-stone-900 dark:text-stone-100" : ""
+//             )}
+//         >
+//             {text}
+//         </Link>
+//     );
+// };
 
 const Nav = ({ current }: { current: string }) => {
     let dark = cookies().get("theme")?.value != "light";
