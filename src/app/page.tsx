@@ -5,8 +5,7 @@ import {
     Linebreak,
     SubHeading,
 } from "@/components/Typography";
-import { MusicalNoteIcon } from "@heroicons/react/16/solid";
-import { MapPinIcon } from "@heroicons/react/16/solid";
+
 import {
     Css3Plain,
     DockerPlain,
@@ -20,7 +19,6 @@ import {
     PythonPlain,
     ReactOriginal,
     RedisOriginal,
-    RustPlain,
     TailwindcssPlain,
     TypescriptOriginal,
 } from "devicons-react";
