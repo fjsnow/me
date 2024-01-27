@@ -75,13 +75,10 @@ const ShortTechnology = ({
 
 const Index = () => {
     const birth = "2004-12-03";
-    const age =
-        new Date().getFullYear() -
-        new Date(birth).getFullYear() -
-        (new Date().getMonth() < new Date(birth).getMonth() &&
-        new Date().getDate() < new Date(birth).getDate()
-            ? 1
-            : 0);
+    const age = Math.floor(
+        (new Date().getTime() - new Date(birth).getTime()) /
+            (1000 * 60 * 60 * 24 * 365)
+    );
 
     return (
         <Page current="index">
