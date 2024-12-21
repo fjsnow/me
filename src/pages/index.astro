@@ -1,68 +1,68 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
 type Technology = {
-  name: string;
-  colour: string;
-  icon: string;
-  use: string;
+    name: string;
+    colour: string;
+    icon: string;
+    use: string;
 };
 
 const technologies: Technology[] = [
-  {
-    name: 'TypeScript',
-    colour: '#007ACC',
-    icon: 'typescript',
-    use: 'A strongly-typed superset of JavaScript.',
-  },
+    {
+        name: "TypeScript",
+        colour: "#007ACC",
+        icon: "typescript",
+        use: "A strongly-typed superset of JavaScript.",
+    },
 ];
 ---
 
 <Layout>
-  <article class="prose max-w-none">
-    <h3>Hey - I'm Fred</h3>
-    <p>20 y/o developer from the UK.</p>
-    <h3>What do I do?</h3>
-    <p>
-      I'm a self-taught developer, particularly interested in fullstack web
-      development, UI/UX design, and a little bit of game development. I also
-      love Mathematics!
-    </p>
-    <p>
-      I'm currently studying computer science full-time at the{' '}
-      <b>University of Birmingham</b>. I'm also working on a few side projects
-      in my spare time.
-    </p>
-    <h3>What do I use?</h3>
-    <p>
-      I love to learn new technologies, languages, and frameworks!
-      <br />
-      Here's a few I'm currently using the most:
-    </p>
-  </article>
-  <div class="flex flex-col items-center justify-center gap-4 md:gap-2">
-    {
-      technologies.map((technology) => (
-        <div class="flex flex-col items-start border border-stone-200 rounded-lg w-full md:flex-row md:items-center">
-          <div
-            class="flex items-center justify-center px-12 py-6 rounded-t-lg border-b border-stone-200 w-full md:w-min md:rounded-tr-none md:rounded-l-lg md:border-b-0 md:border-r md:py-8"
-            style={{ backgroundColor: technology.colour }}
-          >
-            <Icon width={32} height={32} name={technology.icon} />
-          </div>
-          <div class="flex flex-col justify-center gap-4 md:flex-row md:items-center p-4">
-            <div class="flex flex-col justify-center min-w-[8rem]">
-              <h1 class="font-bold text-sm">name:</h1>
-              <h2 class="text-sm">{technology.name}</h2>
-            </div>
-            <div class="flex flex-col justify-center">
-              <h1 class="font-bold text-sm">use:</h1>
-              <h2 class="text-sm">{technology.use}</h2>
-            </div>
-          </div>
-        </div>
-      ))
-    }
-  </div>
+    <article class="prose max-w-none">
+        <h3>Hey - I'm Fred</h3>
+        <p>20 y/o developer from the UK.</p>
+        <h3>What do I do?</h3>
+        <p>
+            I'm a self-taught developer, particularly interested in fullstack
+            web development, UI/UX design, and a little bit of game development.
+            I also love Mathematics!
+        </p>
+        <p>
+            I'm currently studying computer science full-time at the{" "}
+            <b>University of Birmingham</b>. I'm also working on a few side
+            projects in my spare time.
+        </p>
+        <h3>What do I use?</h3>
+        <p>
+            I love to learn new technologies, languages, and frameworks!
+            <br />
+            Here's a few I'm currently using the most:
+        </p>
+    </article>
+    <div class="flex flex-col items-center justify-center gap-4 md:gap-2">
+        {
+            technologies.map((technology) => (
+                <div class="flex flex-col items-start border border-stone-200 rounded-lg w-full md:flex-row md:items-center">
+                    <div
+                        class="flex items-center justify-center px-12 py-6 rounded-t-lg border-b border-stone-200 w-full md:w-min md:rounded-tr-none md:rounded-l-lg md:border-b-0 md:border-r md:py-8"
+                        style={{ backgroundColor: technology.colour }}
+                    >
+                        <Icon width={32} height={32} name={technology.icon} />
+                    </div>
+                    <div class="flex flex-col justify-center gap-4 md:flex-row md:items-center p-4">
+                        <div class="flex flex-col justify-center min-w-[8rem]">
+                            <h1 class="font-bold text-sm">name:</h1>
+                            <h2 class="text-sm">{technology.name}</h2>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h1 class="font-bold text-sm">use:</h1>
+                            <h2 class="text-sm">{technology.use}</h2>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
 </Layout>

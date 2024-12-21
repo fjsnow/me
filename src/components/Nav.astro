@@ -1,20 +1,20 @@
 ---
-const links: string[] = ['blog', 'projects'];
+const links: string[] = ["blog", "projects"];
 ---
 
 <div class="flex flex-row items-center justify-start h-8">
-  <a href="/">
-    <h1 class="text-white bg-blue-600 hover:bg-blue-700 px-4 py-1">
-      fj@site:~$
-    </h1>
-  </a>
-  <div class="flex flex-row gap-6 ml-auto">
-    {
-      links.map((link) => (
-        <a class="text-stone-400 hover:text-stone-800" href={link}>
-          /{link}
-        </a>
-      ))
-    }
-  </div>
+    <a href="/">
+        <h1 class="text-white bg-blue-600 hover:bg-blue-700 px-4 py-1">
+            fj@site:~$
+        </h1>
+    </a>
+    <div class="flex flex-row gap-6 ml-auto">
+        {
+            links.map((link) => (
+                <a class="text-stone-400 hover:text-stone-800" href={link}>
+                    /{link}
+                </a>
+            ))
+        }
+    </div>
 </div>

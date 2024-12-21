@@ -1,27 +1,27 @@
 ---
-import '@fontsource/ibm-plex-mono/400.css';
-import '@fontsource/ibm-plex-mono/500.css';
-import '@fontsource/ibm-plex-mono/700.css';
-import Nav from '../components/Nav.astro';
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource/ibm-plex-mono/700.css";
+import Nav from "../components/Nav.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Freddy Snow</title>
-  </head>
-  <body class="flex flex-col max-w-4xl w-full h-full p-6 mx-auto gap-2">
-    <Nav />
-    <slot />
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Freddy Snow</title>
+    </head>
+    <body class="flex flex-col max-w-4xl w-full h-full p-6 mx-auto gap-2">
+        <Nav />
+        <slot />
+    </body>
 </html>
 
 <style>
-  body {
-    font-family: 'IBM Plex Mono', monospace;
-  }
+    body {
+        font-family: "IBM Plex Mono", monospace;
+    }
 </style>
