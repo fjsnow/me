@@ -1,30 +1,18 @@
 ---
-type Link = {
-  name: string;
-  href: string;
-};
-
-const links: Link[] = [
-  {
-    name: "blog",
-    href: "/blog",
-  },
-  {
-    name: "projects",
-    href: "/projects",
-  },
-];
+const links: string[] = ['blog', 'projects'];
 ---
 
 <div class="flex flex-row items-center justify-start h-8">
   <a href="/">
-    <h1 class="text-white bg-blue-600 px-4 py-1">fj@site:~$</h1>
+    <h1 class="text-white bg-blue-600 hover:bg-blue-700 px-4 py-1">
+      fj@site:~$
+    </h1>
   </a>
   <div class="flex flex-row gap-6 ml-auto">
     {
       links.map((link) => (
-        <a class="text-stone-600 hover:text-stone-800" href={link.href}>
-          {link.name}
+        <a class="text-stone-400 hover:text-stone-800" href={link}>
+          /{link}
         </a>
       ))
     }
