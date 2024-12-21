@@ -1,12 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Prose from '../components/Prose.astro';
 import Hero from '../components/index/Hero.md';
 import Technologies from '../components/index/Technologies.astro';
 ---
 
 <Layout>
-    <article class="prose max-w-full">
-        <Hero />
-    </article>
+    <Prose><Hero /></Prose>
     <Technologies />
 </Layout>
