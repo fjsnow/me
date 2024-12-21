@@ -2,10 +2,67 @@
 import Layout from '../layouts/Layout.astro';
 import Prose from '../components/Prose.astro';
 import Hero from '../components/index/Hero.md';
-import Technologies from '../components/index/Technologies.astro';
+import { Icon } from 'astro-icon/components';
+
+type Technology = {
+    name: string;
+    colour: string;
+    icon: string;
+    use: string;
+};
+
+const technologies: Technology[] = [
+    {
+        name: 'TypeScript',
+        colour: '#007ACC',
+        icon: 'typescript',
+        use: 'Strongly-typed superset of JavaScript.',
+    },
+    {
+        name: 'Rust',
+        colour: '#ffffff',
+        icon: 'rust',
+        use: 'Extremely performant memory safe language.',
+    },
+    {
+        name: 'React',
+        colour: '#222222',
+        icon: 'react',
+        use: 'Component based library for build user interfaces.',
+    },
+    {
+        name: 'MySQL',
+        colour: '#41759b',
+        icon: 'mysql',
+        use: 'Relational database management system',
+    },
+];
 ---
 
 <Layout>
     <Prose><Hero /></Prose>
-    <Technologies />
+    <div class="flex flex-col items-center justify-center gap-4 md:gap-2">
+        {
+            technologies.map((technology) => (
+                <div class="flex flex-col items-start border border-stone-200 rounded-lg w-full md:flex-row md:items-center">
+                    <div
+                        class="flex items-center justify-center px-12 py-6 rounded-t-lg border-b border-stone-200 w-full md:w-min md:rounded-tr-none md:rounded-l-lg md:border-b-0 md:border-r md:py-8"
+                        style={{ backgroundColor: technology.colour }}
+                    >
+                        <Icon width={32} height={32} name={technology.icon} />
+                    </div>
+                    <div class="flex flex-col justify-center gap-4 md:flex-row md:items-center p-4">
+                        <div class="flex flex-col justify-center min-w-[8rem]">
+                            <h1 class="font-bold text-sm">name:</h1>
+                            <h2 class="text-sm">{technology.name}</h2>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h1 class="font-bold text-sm">use:</h1>
+                            <h2 class="text-sm">{technology.use}</h2>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
 </Layout>
